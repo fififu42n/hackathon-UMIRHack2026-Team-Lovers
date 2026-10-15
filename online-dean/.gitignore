@@ -1,0 +1,26 @@
+   # Virtual environments
+   .venv/
+   .venv*/
+   venv/
+   env/
+
+   # Python
+   __pycache__/
+   *.pyc
+
+   # Temporary run outputs
+   debug/
+   uploads/
+   ocr_cards.json
+   errors.txt
+   check_report.txt
+
+   # OCR models
+   .EasyOCR/
+   *.pth
+
+   # Editors / OS
+   .vscode/
+   .idea/
+   .DS_Store
+   Thumbs.db

@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- figma:head-start -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Онлайн-деканат — цифровой сервис для проверки документов и общения с деканатом."
+    />
+    <title>Онлайн-деканат</title>
+    <link rel="stylesheet" href="/static/index.css" />
+    <!-- figma:head-end -->
+  </head>
+  <body>
+    <!-- figma:body-start -->
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#main" aria-label="Онлайн-деканат — на главную">
+          <img
+            class="bank-logo"
+            src="/static/center-invest-logo.png"
+            alt="Банк Центр-инвест"
+          />
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="service-title">Онлайн-деканат</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Основная навигация">
+          <a class="nav-link active" href="#main">Документы</a>
+          <a class="nav-link" href="#profile">Профиль</a>
+          <a class="nav-link nav-inbox" href="#inbox">
+            Почтовый ящик
+            <span class="notification-count">1</span>
+          </a>
+        </nav>
+
+        <a class="user-menu" href="#profile">
+          <span class="avatar">АС</span>
+          <span class="user-copy">
+            <strong>Анна Смирнова</strong>
+            <small>3 курс</small>
+          </span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m7 10 5 5 5-5" />
+          </svg>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="main">
+          <div class="hero-copy">
+            <span class="eyebrow">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m12 3 1.3 4.6L17.5 9l-4.2 1.8L12 15.5l-1.3-4.7L6.5 9l4.2-1.4L12 3Z" />
+              </svg>
+              Цифровой помощник студента
+            </span>
+            <h1>Документы в деканат — <em>быстро и без очередей</em></h1>
+            <p>
+              Загрузите фото или скан. Сервис проверит качество, распознает
+              данные и подготовит ответ по регламенту вашего ВУЗа.
+            </p>
+            <div class="hero-points" aria-label="Преимущества">
+              <span><i>01</i> Проверка качества фото</span>
+              <span><i>02</i> Ответ по Положению</span>
+              <span><i>03</i> Официальная переписка</span>
+            </div>
+          </div>
+
+          <aside class="registration-card" aria-labelledby="registration-title">
+            <div class="card-heading">
+              <span class="heading-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21a8 8 0 0 1 16 0" />
+                </svg>
+              </span>
+              <div>
+                <h2 id="registration-title">Создайте профиль</h2>
+                <p>Чтобы документы сразу попали в ваш деканат</p>
+              </div>
+            </div>
+
+            <form class="registration-form">
+              <label>
+                <span>ФИО</span>
+                <input type="text" placeholder="Например, Анна Смирнова" />
+              </label>
+              <label>
+                <span>Учебное заведение</span>
+                <input type="text" placeholder="Введите название ВУЗа" />
+              </label>
+              <div class="form-grid">
+                <label>
+                  <span>Курс</span>
+                  <select>
+                    <option selected disabled>Выберите</option>
+                    <option>1 курс</option>
+                    <option>2 курс</option>
+                    <option>3 курс</option>
+                    <option>4 курс</option>
+                    <option>Магистратура</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Email или телефон</span>
+                  <input
+                    type="text"
+                    placeholder="Введите email или телефон"
+                    inputmode="email"
+                  />
+                </label>
+              </div>
+              <button class="primary-button" type="submit">
+                Зарегистрироваться
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+              <small class="legal">
+                Нажимая кнопку, вы соглашаетесь с обработкой персональных
+                данных
+              </small>
+            </form>
+          </aside>
+        </section>
+
+        <section class="workspace-section" aria-labelledby="upload-title">
+          <div class="section-heading-row">
+            <div>
+              <span class="section-kicker">Новый запрос</span>
+              <h2 id="upload-title">Проверка документа</h2>
+              <p>Загрузите фото, скан или PDF размером до 15 МБ</p>
+            </div>
+            <span class="service-status"><i></i> Сервис работает</span>
+          </div>
+
+          <div class="processing-grid">
+            <article class="upload-card">
+              <div class="step-heading">
+                <span>1</span>
+                <div>
+                  <h3>Загрузите документ</h3>
+                  <p>Убедитесь, что весь текст хорошо читается</p>
+                </div>
+              </div>
+
+              <label class="upload-zone">
+                <input id="file-input" type="file" accept="image/jpeg,image/png,application/pdf,.jpg,.jpeg,.png,.pdf" />
+                <span class="upload-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 16V4m0 0L7 9m5-5 5 5M5 14v6h14v-6" />
+                  </svg>
+                </span>
+                <strong id="file-name">Перетащите документ сюда</strong>
+                <small>или выберите файл на устройстве</small>
+                <span class="secondary-button">Выбрать файл</span>
+              </label>
+
+              <div class="error-feedback" id="error-box" role="alert" hidden>
+                <span class="warning-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 2.8 20h18.4L12 3Z" />
+                    <path d="M12 9v5M12 17.5v.2" />
+                  </svg>
+                </span>
+                <div class="error-copy">
+                  <strong>Не удалось распознать документ</strong>
+                  <p id="error-text"></p>
+                  <ul>
+                    <li>Расположите документ целиком в кадре</li>
+                    <li>Избегайте бликов, теней и размытия</li>
+                  </ul>
+                </div>
+                <button class="retry-button" id="retry-btn" type="button">
+                  Загрузить заново
+                </button>
+              </div>
+            </article>
+
+            <article class="question-card">
+              <div class="step-heading">
+                <span>2</span>
+                <div>
+                  <h3>Добавьте вопрос</h3>
+                  <p>Опишите, что нужно узнать по документу</p>
+                </div>
+              </div>
+              <label class="textarea-label">
+                <span>Тип документа</span>
+                <select id="doc-type" class="type-select">
+                  <option value="auto">Определить автоматически</option>
+                  <option value="study_certificate">Справка об обучении</option>
+                  <option value="academic_leave_application">Заявление на академический отпуск</option>
+                  <option value="internship_certificate">Справка о практике</option>
+                </select>
+              </label>
+              <label class="textarea-label">
+                <span>Ваш вопрос по документу</span>
+                <textarea
+                  id="question"
+                  placeholder="Например: можно ли подать это заявление после установленного срока?"
+                ></textarea>
+              </label>
+              <button class="primary-button" id="check-btn" type="button">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m12 3 1.3 4.6L17.5 9l-4.2 1.8L12 15.5l-1.3-4.7L6.5 9l4.2-1.4L12 3Z" />
+                </svg>
+                Проверить документ
+              </button>
+              <div class="security-note">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="5" y="10" width="14" height="11" rx="3" />
+                  <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+                </svg>
+                Результат предварительный: решение о принятии документа принимает сотрудник деканата
+              </div>
+            </article>
+          </div>
+        
+          <div class="results" id="results" hidden>
+            <div class="results-head">
+              <h3 id="res-title">Результат проверки</h3>
+              <span class="status-pill" id="res-status"></span>
+            </div>
+            <div class="results-grid">
+              <div>
+                <h4>Карточка полей</h4>
+                <table class="fields-table"><tbody id="res-fields"></tbody></table>
+              </div>
+              <div>
+                <h4 id="res-q-title">Ответ</h4>
+                <p class="answer-text" id="res-answer"></p>
+                <div id="res-rules" class="rules-list"></div>
+                <details class="ocr-details" id="res-ocr-wrap">
+                  <summary>Распознанный текст</summary>
+                  <pre id="res-ocr"></pre>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-section" id="profile" aria-labelledby="profile-title">
+          <div class="profile-summary">
+            <span class="large-avatar">АС</span>
+            <div>
+              <span class="section-kicker">Профиль студента</span>
+              <h2 id="profile-title">Анна Смирнова</h2>
+              <p>Южный федеральный университет · Экономический факультет · 3 курс</p>
+            </div>
+            <a class="secondary-button profile-button" href="#main">Изменить данные</a>
+          </div>
+
+          <div class="profile-grid">
+            <article class="documents-card">
+              <div class="card-title-row">
+                <div>
+                  <h3>Мои документы</h3>
+                  <p>Последние обращения и результаты</p>
+                </div>
+                <a href="#main">Новый документ</a>
+              </div>
+              <div class="document-row">
+                <span class="file-icon">PDF</span>
+                <div>
+                  <strong>Заявление на перевод</strong>
+                  <small>Сегодня, 10:24 · 1,2 МБ</small>
+                </div>
+                <span class="status processing">В обработке</span>
+              </div>
+              <div class="document-row">
+                <span class="file-icon">JPG</span>
+                <div>
+                  <strong>Справка об обучении</strong>
+                  <small>12 сентября · 840 КБ</small>
+                </div>
+                <span class="status ready">Готово</span>
+              </div>
+            </article>
+
+            <article class="inbox-card" id="inbox">
+              <div class="card-title-row">
+                <div>
+                  <h3>Почтовый ящик</h3>
+                  <p>Официальные ответы деканата</p>
+                </div>
+                <span class="notification-count">1</span>
+              </div>
+              <div class="message">
+                <span class="unread-dot"></span>
+                <div>
+                  <div class="message-meta">
+                    <strong>Ваше заявление принято</strong>
+                    <small>Сегодня, 11:42</small>
+                  </div>
+                  <p>
+                    Заявление на перевод зарегистрировано. Номер обращения:
+                    Д-2409-184.
+                  </p>
+                  <span class="attachment">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 12.5 13.5 7a3 3 0 1 1 4.2 4.2l-7.2 7.2a5 5 0 0 1-7.1-7.1l7-7" />
+                    </svg>
+                    Официальный_ответ.pdf
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <img src="/static/center-invest-logo.png" alt="Банк Центр-инвест" />
+        <p>Онлайн-деканат · Сервис для студентов и учебных заведений</p>
+        <span>Поддержка: пн–пт, 9:00–18:00</span>
+      </footer>
+    </div>
+    <!-- figma:body-end -->
+  <script src="/static/app.js" defer></script>
+  </body>
+</html>
